@@ -1,4 +1,36 @@
 :root {
   --primary-color: #00bc77;
   --secondary-color: #12002b;
+  --text-color: #2c3e50 ;
+}
+
+html {
+  color: var(--text-color);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+a:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-offset: 1px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.navElement {
+  margin-right: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.navElement__Icon {
+  margin-right: 5px;
+}
+
+#brandLogo {
+  width: 200px;
 }

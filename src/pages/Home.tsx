@@ -1,5 +1,7 @@
+import { Header } from "../components/Header";
+
 export function Home() {
     return <>
-        <p>This page need to be implemented</p>
+        <Header/>
     </>
 }
