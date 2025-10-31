@@ -4,6 +4,7 @@ export function Header() {
     return <header>
         <Link to="/">
             <img src="./img/logo.webp" alt="Logo ArgentBank" id="brandLogo" />
+            <h1 className="sr-only">Argent Bank</h1>
         </Link>
         <nav>
             <Link to="/sign-in" className="navElement">
