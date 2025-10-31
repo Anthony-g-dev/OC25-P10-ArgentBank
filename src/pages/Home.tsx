@@ -23,16 +23,18 @@ const features = [
 export function Home() {
     return <>
         <Header/>
-        <section className="hero">
-            <div className="hero__content">
-                <h2 className="sr-only">Promoted Content</h2>
-                <p className="hero__title">No fees.<br/>No minimum deposit.<br/>High interest rates.</p>
-                <p className="hero__text">Open a savings account with Argent Bank today!</p>
-            </div>
-        </section>
-        <section className="features">
-            {features.map((feature, index) => <Feature key={index} title={feature.title} description={feature.description} icon={feature.icon}/>)}
-        </section>
+        <main>
+            <section className="hero">
+                <div className="hero__content">
+                    <h2 className="sr-only">Promoted Content</h2>
+                    <p className="hero__title">No fees.<br/>No minimum deposit.<br/>High interest rates.</p>
+                    <p className="hero__text">Open a savings account with Argent Bank today!</p>
+                </div>
+            </section>
+            <section className="features">
+                {features.map((feature, index) => <Feature key={index} title={feature.title} description={feature.description} icon={feature.icon}/>)}
+            </section>
+        </main>
         <Footer/>
     </>
 }

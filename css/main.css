@@ -1,11 +1,13 @@
 :root {
   --primary-color: #00bc77;
-  --secondary-color: #12002b;
+  --dark-background-color: #12002b;
   --tertiary-color: #cccccc;
   --text-color: #2c3e50 ;
 }
 
 html {
+  display: flex;
+  height: 100%;
   color: var(--text-color);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,9 +15,20 @@ html {
   text-align: center;
 }
 
+body {
+  display: flex;
+  flex: 1;
+}
+
 a:focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
   outline-offset: 1px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 header {
@@ -36,6 +49,10 @@ footer p {
   margin: 0;
 }
 
+.flex--1 {
+  flex: 1;
+}
+
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -47,6 +64,10 @@ footer p {
   position: absolute !important;
   width: 1px !important;
   white-space: nowrap !important; /* 3 */
+}
+
+.bg--dark {
+  background-color: var(--dark-background-color);
 }
 
 .navElement {
@@ -111,6 +132,75 @@ footer p {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+.signInForm {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+.signInForm__icon {
+  font-size: 5rem;
+}
+.signInForm__title {
+  margin: 1rem 0;
+}
+.signInForm__form {
+  margin-top: 1.5rem;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.inputWrapper label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.inputWrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.inputWrapper input:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.inputRemember {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.inputRemember input[type=checkbox] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.inputRemember label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.signInButton {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+.signInButton:hover {
+  opacity: 0.9;
 }
 
 @media (min-width: 720px) {
