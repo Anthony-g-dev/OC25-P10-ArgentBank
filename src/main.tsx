@@ -1,5 +1,8 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
+import { RouterProvider } from "react-router-dom"
+
+import { router } from "./router"
 
 import '../css/reset.css'
 import '../css/main.css'
@@ -11,7 +14,7 @@ if (container) {
 
   root.render(
     <StrictMode>
-      {/* <RouterProvider router={router} />  */}
+      <RouterProvider router={router} /> 
     </StrictMode>,
   )
 } else {
